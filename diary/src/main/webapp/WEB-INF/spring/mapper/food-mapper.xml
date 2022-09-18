@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.callor.memo.persistance.FoodDao">
+ <!-- 대문자를 소문자로 : ctrl + shift + y -->
+ <!-- 소문자를 대문자로 : ctrl + shift + x -->
+ 	<select id="selectAll" resultType="UserFoodVO">
+ 		SELECT * FROM tbl_food
+ 	</select>
+ 	<select id="findById" resultType="UserFoodVO">
+		 SELECT * FROM tbl_food
+		 WHERE UC_SEQ = #{UC_SEQ}
+ 	</select>
+  	<select id="findByGugun" resultType="UserFoodVO">
+ 		SELECT * FROM tbl_food
+ 		WHERE GUGUN_NM = #{GUGUN_NM}
+ 	</select>
+ 	<insert id="insert" parameterType="UserFoodVO">
+ 		INSERT INTO tbl_food (
+			MAIN_TITLE,
+			GUGUN_NM,
+			CNTCT_TEL,
+			ADDR1,
+			USAGE_DAY_WEEK_AND_TIME,
+			MAIN_IMG_THUMB,
+			ITEMCNTNTS,
+			usercheck
+ 		) VALUES (
+			#{MAIN_TITLE}, 
+			#{GUGUN_NM},
+			#{CNTCT_TEL}, 
+			#{ADDR1},
+			#{USAGE_DAY_WEEK_AND_TIME},
+			#{MAIN_IMG_THUMB},
+			#{ITEMCNTNTS},
+			#{usercheck}
+ 		)
+ 		
+ 	</insert>
+ 	<update id="update" parameterType="UserFoodVO">
+	 	UPDATE tbl_food SET
+	 		MAIN_TITLE= 			#{MAIN_TITLE}, 	
+			GUGUN_NM=				#{GUGUN_NM},
+			ADDR1=					#{ADDR1},
+			CNTCT_TEL =				#{CNTCT_TEL},
+			USAGE_DAY_WEEK_AND_TIME=#{USAGE_DAY_WEEK_AND_TIME},
+			MAIN_IMG_THUMB=			#{MAIN_IMG_THUMB},
+			ITEMCNTNTS=				#{ITEMCNTNTS},
+			usercheck = 1
+	 	WHERE UC_SEQ= 	#{UC_SEQ} 	
+ 	</update>
+ 	<delete id="delete" >
+ 		DELETE FROM tbl_food
+ 		WHERE UC_SEQ= #{UC_SEQ}
+ 	</delete>
+ 
+ 	<select id="create_food_table">
+ 		CREATE TABLE IF NOT EXISTS tbl_food ( 
+			UC_SEQ						BIGINT			PRIMARY KEY 	AUTO_INCREMENT,
+			MAIN_TITLE 					VARCHAR(100),
+			GUGUN_NM					VARCHAR(4),
+			ADDR1						VARCHAR(300),
+			CNTCT_TEL 					VARCHAR(12),
+			USAGE_DAY_WEEK_AND_TIME		VARCHAR(200),
+			MAIN_IMG_THUMB				VARCHAR(400),
+			ITEMCNTNTS					VARCHAR(1000),
+			usercheck  						VARCHAR(5)
+  		)
+ 	</select>
+ 
+ 
+ 
+ 
+ </mapper> 

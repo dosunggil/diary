@@ -1,0 +1,116 @@
+.hs_div {
+	margin: 30px auto;
+	justify-content: center;
+	line-height: 30px;
+	width: 650px;
+	display: flex;
+	flex-direction: column;
+}
+
+.hs_head {
+	display: flex;
+	justify-content: space-around;
+}
+
+.hs_div a {
+	text-decoration: none;
+	color: #544f4f;
+	font-weight: 800;
+}
+
+.hs_f {
+	font-size: 17px;
+	margin: 3px;
+}
+
+.hs_b {
+	border-bottom: 1px solid black;
+	font-weight: 300;
+	margin: 10px;
+	padding: 4px 0;
+	margin-left: 20px;
+}
+
+table.hs_detail img {
+	width: 120px;
+}
+
+.btn-neo {
+	padding: 30px;
+	color: #444;
+	font-size: 1rem;
+	font-weight: 700;
+	outline: none;
+	border: none;
+	box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7), -6px -6px 10px
+		rgba(255, 255, 255, 0.5), 6px 6px 8px rgba(255, 255, 255, 0.075), 6px
+		6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hs_home {
+	text-align: center;
+}
+
+table tr td, table tr th {
+	padding: 5px;
+}
+
+
+
+table tr td {
+	text-align: center;
+	vertical-align: middle !important;
+}
+div.hs-container{
+	display: flex;
+	justify-content: center;
+}
+
+
+nav {
+	border-bottom: 1px solid black;
+}
+
+table tr td {
+	cursor: pointer;
+}
+
+
+
+.hs_width {
+	min-width: 800px;
+	width: 70%;
+	margin: 10px auto;
+	border: 5px solid #767676;
+	padding-bottom: 30px;
+	width: 70%;
+	border-radius: 20px;
+	background-color: #f5f5f5;
+}
+
+.hs_how {
+	display: flex;
+	justify-content: space-around;
+}
+
+nav h4 {
+	text-align: center;
+	padding: 10px;
+	font-size: 20px;
+	margin: 10px 0;
+	line-height: 50px;
+}
+
+.hs_hs {
+	display: flex;
+	text-align: center;
+	margin: 15px 0;
+	font-weight: bolder;
+}
+
+div.hs-img-div {
+	margin: 0 auto;
+}
+label {
+	display: none;
+}
